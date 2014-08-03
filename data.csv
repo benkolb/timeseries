@@ -1,4 +1,4 @@
-number:Int,english,french,german
+number,english,french,german
 1,one,un,eins
 2,two,deux,zwei
 3,three,trois,drei
