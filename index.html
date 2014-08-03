@@ -1,32 +1,37 @@
-<!doctype html>
 <html>
 <head>
 <link rel="shortcut icon" type="image/x-icon" href="http://benkolb.github.io/favicon.ico">
 <title>BK Time Series</title>
 </head>
+
 <body>
 <h1>Time Series</h1>
 <p>Create and make available a set of widely used macroeconomic time series.</p>
 
+<DIV class="body">
+<div style="display:none">
+<object ID="data" >
+  <param nAme="DataURL" value="/timeseries/data.csv">
+  <param nAme="UseHeader" value="True">
+  <param nAme="TextQualifier" value="'">
+</object>
+</div>
+
 <! TS data table>
-<table datasrc='#data'>
+<table datasrc=#data>
   <thead>
      <tr><th>Number</th><th>English</th><th>French</th><th>German</th></tr>
   </thead>
-  <tbody> <tr>
-     <td><span datafld='number'> </span></td>
-     <td><span datafld='english'></span></td>
-     <td><span datafld='french'> </span></td>
-     <td><span datafld='german'> </span></td>
+  <tbody> 
+     <tr>
+        <td><div datafld="number"></div></td>
+        <td><div datafld="english"></div></td>
+        <td><div datafld="french"></div></td>
+        <td><div datafld="german"></div></td>
+		<td>asdf</td>
+	 </tr>
   </tbody>
 </table>
-
-<! Object link(?) >
-<object ID=data>
-  <param nAme="DataURL" value="data.csv">
-  <param nAme="UseHeader" value="true">
-</object>
-<!classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83">
 
 <a href="http://benkolb.github.io/">back</a>
 </body>
