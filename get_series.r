@@ -7,7 +7,7 @@ library(xts)
 #library(xtsExtra)
 
 # Housekeeping
-wd = "C:/Users/Benedikt/Desktop/stuff/github/benkolb.github.io/timeseries"
+wd = "C:/Users/Benedikt/Documents/Github/timeseries"
 
 ## from datamarket.com
 # GDP of Eurozone(27) (quarterly, nominal)
