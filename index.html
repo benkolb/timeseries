@@ -3,38 +3,48 @@
 <link rel="shortcut icon" type="image/x-icon" href="http://benkolb.github.io/favicon.ico">
 <link rel="stylesheet" type="text/css" media="screen"
       href="http://benkolb.github.io/general.css">
+<script type="text/javascript" src="C://Users/Benedikt/Documents/GitHub/timeseries/jquery.csvToTable.js"></script>
+<script type="text/javascript" src="C://Users/Benedikt/Documents/GitHub/timeseries/jquery-1.4.2.min.js"></script>
+<script>
+	$(function() {
+		$.get('test.csv', function(data) {
+			$('#CSVSource').html('<pre>' + data + '</pre>');
+		});
+		$('#CSVTable').CSVToTable('test.csv', { loadingImage: 'images/loading.gif', startLine: 0 });
+		$.get('test.tsv', function(data) {
+			$('#TSVSource').html('<pre>' + data + '</pre>');
+		});
+		$('#CSVTable2').CSVToTable('test.csv', { loadingImage: 'images/loading.gif', startLine: 1, headers: ['Album Title', 'Artist Name', 'Price ($USD)'] }).bind("loadComplete",function() { 
+			$('#CSVTable2').find('TABLE').tablesorter();
+		});;
+	});
+	</script>
 <title>BK Time Series</title>
 </head>
 
 <body>
 <h1>Time Series</h1>
-<p>Create and make available a set of widely used macroeconomic time series.</p>
+<table width="100%" border="0">
+<tr>
+<td class="sidebar" width="15%"> 
+<br /><br />
+<br /><br />
+<a href="http://benkolb.github.io/timeseries/" style="color: white; text-decoration: none; font-size: 120%">Time series</a>
+<br /><br />
+<a href="http://benkolb.github.io/codes/" style="color: white; text-decoration: none; font-size: 120%">Codes</a>
+<br /><br />
+<a href="http://benkolb.github.io/quotes/" style="color: white; text-decoration: none; font-size: 120%">Quotes</a>
+<br /><br />
+<a href="http://benkolb.github.io/xkcd/"style="color: white; text-decoration: none; font-size: 120%">A Primer in Metrics with xkcd.com</a>
+</td>
+<td class="body">
+<br />
+<p>Some macroeconomic time series I have used in the past. [t.b.d.]</p>
 
-<DIV class="body">
-<div style="display:none">
-<object ID="data" >
-  <param nAme="DataURL" value="/data.csv">
-  <param nAme="UseHeader" value="True">
-  <param nAme="TextQualifier" value="'">
-</object>
-</div>
+<div id="CSVTable"></div>
 
-<! TS data table>
-<table datasrc=#data>
-  <thead>
-     <tr><th>Number</th><th>English</th><th>French</th><th>German</th></tr>
-  </thead>
-  <tbody> 
-     <tr>
-        <td><div datafld="number"></div></td>
-        <td><div datafld="english"></div></td>
-        <td><div datafld="french"></div></td>
-        <td><div datafld="german"></div></td>
-		<td>asdf</td>
-	 </tr>
-  </tbody>
+</td>
+</tr>
 </table>
-
-<a href="http://benkolb.github.io/">back</a>
 </body>
 </html>
