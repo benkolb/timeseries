@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="shortcut icon" type="image/x-icon" href="http://benkolb.github.io/favicon.ico">
 <link rel="stylesheet" type="text/css" media="screen"
       href="http://benkolb.github.io/general.css">
-<script type="text/javascript" src="C://Users/Benedikt/Documents/GitHub/timeseries/jquery.csvToTable.js"></script>
-<script type="text/javascript" src="C://Users/Benedikt/Documents/GitHub/timeseries/jquery-1.4.2.min.js"></script>
-<script>
+<!script type="text/javascript" src="C://Users/Benedikt/Documents/GitHub/timeseries/jquery.csvToTable.js"></script>
+<!script type="text/javascript" src="C://Users/Benedikt/Documents/GitHub/timeseries/jquery-1.4.2.min.js"></script>
+<!script>
 	$(function() {
 		$.get('test.csv', function(data) {
 			$('#CSVSource').html('<pre>' + data + '</pre>');
@@ -21,7 +22,6 @@
 	</script>
 <title>BK Time Series</title>
 </head>
-
 <body>
 <h1>Time Series</h1>
 <table width="100%" border="0">
